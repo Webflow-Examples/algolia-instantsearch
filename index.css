@@ -1,0 +1,302 @@
+/* Use CMD/CTRL + F and search "||" to find sections in file */
+
+/* || Root styles */
+
+:root {
+  --red: #ee3232;
+  --white75: rgba(255, 255, 255, 0.75);
+}
+
+/* || Webflow Loading element styles */
+
+.loader {
+  display: flex;
+}
+
+/* || Clear Filters button */
+
+.wf-clear-refinement-button {
+  font-size: 16px;
+  height: 40px;
+  background-color: var(--red);
+  background-image: none;
+  border: 2px solid var(--white75);
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.wf-clear-refinement-button:active {
+  transform: scale(0.99);
+  box-shadow: none;
+  border-color: var(--white75);
+}
+
+.wf-clear-refinement-disabled {
+  opacity: 40%;
+  transform: none !important;
+  cursor: not-allowed !important;
+}
+
+.wf-clear-refinement-disabled:hover {
+  opacity: 40% !important;
+}
+
+.wf-clear-refinement-button:hover {
+  opacity: 90%;
+  background-image: none;
+}
+
+/* || Hits per page dropdown */
+
+.ais-HitsPerPage-select:focus,
+.ais-SortBy-select:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* || Genre component */
+
+.wf-refinmentlist-count {
+  border-color: var(--white75);
+  background-color: black;
+  color: white;
+  padding: 3px 6px;
+}
+
+.ais-RefinementList-labelText {
+  font-size: 16px;
+}
+
+.wf-refinmentlist-checkbox {
+  width: 18px;
+  height: 18px;
+  border-color: var(--white75);
+  background-color: var(--white75);
+}
+
+.wf-refinmentlist-checkbox:checked {
+  border-color: var(--white75);
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  background-color: var(--red);
+  background-image: url(https://uploads-ssl.webflow.com/634823b431517915fb8148c7/6354515912c18def00a2436a_check.png);
+}
+
+/* || Rating component */
+
+.wf-rating-empty-star-icon {
+  opacity: 40%;
+}
+
+.wf-rating-count {
+  border-color: var(--white75);
+  background-color: black;
+  color: white;
+  padding: 3px 6px;
+}
+
+.wf-rating-fullstar-icon {
+  fill: white;
+}
+
+.wf-rating-selected-item > div > a > svg {
+  fill: yellow;
+  stroke: none;
+}
+
+.wf-rating-item > div > a > .wf-rating-empty-star-icon {
+  fill: white !important;
+}
+
+/* || Range slider component */
+
+.rheostat-handle {
+  width: 22px !important;
+  height: 22px !important;
+  border: none !important;
+  outline: 2px solid var(--white75);
+  border-radius: 50% !important;
+  background-image: none !important;
+  background-color: var(--red) !important;
+  box-shadow: none !important;
+}
+
+.rheostat-tooltip {
+  font-size: 12px;
+}
+
+.rheostat-value {
+  font-size: 12px;
+}
+
+.ais-RangeSlider {
+  width: 90%;
+  margin-left: 6px;
+}
+
+.rheostat-progress {
+  background-color: var(--red) !important;
+}
+
+.ais-RangeSlider .rheostat-handle:after,
+.ais-RangeSlider .rheostat-handle:before {
+  display: none !important;
+}
+
+/* || Search component */
+
+.wf-search-form {
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wf-search-input {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  background-image: url("https://uploads-ssl.webflow.com/634823b431517915fb8148c7/63541ff1d7135d3de5f257bd_search-interface-symbol.png");
+  background-repeat: no-repeat;
+  background-position: 15px;
+  background-size: 15px;
+}
+
+.wf-search-reset {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.ais-SearchBox-form:before {
+  display: none;
+}
+
+.wf-search-input:focus {
+  border-color: white;
+}
+
+/* || Stats component */
+
+.wf-label {
+  display: none;
+}
+
+/* || Current filters component */
+
+.wf-current-refinement-list {
+  display: block;
+}
+
+.wf-current-refinement-delete {
+  color: white;
+}
+
+.wf-current-refinement-item {
+  background: none;
+  margin-bottom: 10px;
+  border: none;
+  padding: 0px;
+}
+
+.wf-current-refinement-category {
+  flex-shrink: 0;
+  color: white;
+  border-radius: 4px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 3px 8px;
+  margin-left: 0px;
+  margin-right: 8px;
+}
+
+/* || Hits component */
+
+.hit-wrap {
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.hit-wrap > a > img {
+  height: 100%;
+}
+
+.hit-wrap:hover {
+  transform: translateY(-3px);
+}
+
+.hit-vote-average {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  bottom: -5px;
+  right: -10px;
+  color: white;
+  outline: 2px solid var(--white75);
+  background-color: var(--red);
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+}
+
+.wf-hit-empty {
+  display: none;
+}
+
+.wf-hits-list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Tablet breakpoint */
+@media only screen and (max-width: 991px) {
+  .wf-hits-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.wf-hit-item {
+  display: block;
+  position: relative;
+  box-shadow: none;
+  padding: 0px;
+  background: transparent;
+}
+
+.hit-image {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+/* || Pagination component */
+
+.wf-pagination-root {
+  display: flex;
+  justify-content: end;
+}
+
+.wf-pagination-list {
+  flex-wrap: wrap;
+}
+
+.wf-pagination-selected-item {
+  background-color: var(--red);
+}
+
+* > .wf-pagination-link {
+  font-size: 14px;
+  padding: 20px;
+  color: white;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+* > .wf-pagination-link:hover {
+  background-color: var(--red) !important;
+}
+
+.wf-pagination-disabled > * {
+  opacity: 35%;
+  cursor: not-allowed;
+}
