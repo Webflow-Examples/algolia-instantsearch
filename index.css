@@ -215,6 +215,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.hit-wrap > a {
+  height: 100%;
+}
+
 .hit-wrap > a > img {
   height: 100%;
 }

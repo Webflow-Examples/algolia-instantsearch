@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // establish connection to search index with application ID and public api key from algolia
   const searchClient = algoliasearch(
     "6RJT8M6BD5",
     "113ff52e9d3bd9f965ce3ba85217a2c2"
@@ -9,6 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
     searchClient,
   });
 
+  // add each widget
   search.addWidgets([
     // Clear Filters button
     instantsearch.widgets.clearRefinements({
