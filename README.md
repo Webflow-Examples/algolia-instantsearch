@@ -14,20 +14,22 @@ We need to build the UI in Webflow and give the relevant HTML elements an id. In
 
 Every Algolia widget accepts optional parameters to add extra functionality. For example, the [hitsPerPage widget](https://www.algolia.com/doc/api-reference/widgets/hits-per-page/js/?client=With+a+CDN) explains the extra parameters it accepts.
 
-<img src="https://wadoodh.github.io/images/hitsperpage-widget-example.png" alt="hitsperpage-widget-example">
+<img src="https://wadoodh.github.io/images/hitsperpage-widget-example.png" width="600" alt="hitsperpage-widget-example">
 
 # Style Algolia Widget
 
 Every Algolia widget has a cssClasses property which allows you to write your own css and attach it to the widget. Here's an example of the hitsPerPage widget.
 
-<img src="https://wadoodh.github.io/images/hitsperpage-cssclasses-example.png" alt="hitsperpage-cssclasses-example">
+<img src="https://wadoodh.github.io/images/hitsperpage-cssclasses-example.png" width="600" alt="hitsperpage-cssclasses-example">
 
 # Automating the process
 
 We can automate data into Webflow by building backwards from Algolia. This workflow will automatically add data to Webflow and trigger the webhook to add data to our search index.
+
 <img src="https://wadoodh.github.io/images/node-webhook-algolia-diagram.png" alt="node-webhook-Algolia-diagram">
 
 1. Create Algolia index, get application ID, and both API keys (admin and search-only).
+
    <img src="https://wadoodh.github.io/images/algolia-api-keys.png" alt="Algolia-api-keys">
 
 2. Create and add the `collection_item_created` webhook to Webflow with your endpoint. The endpoint should include code to make an api call to Algolia to add each item. See the [webhook examples repo](https://github.com/Webflow-Examples/webhook-examples).
@@ -37,11 +39,10 @@ We can automate data into Webflow by building backwards from Algolia. This workf
 3. Add Algolia scripts and build the UI in Webflow.
 
    <img src="https://wadoodh.github.io/images/webflow-custom-code-algolia.png" alt="webflow-custom-code-Algolia">
+
    <img src="https://wadoodh.github.io/images/webflow-ui.png" alt="webflow-ui">
 
 4. Run the node js script. See the [populate data into Webflow cms](https://github.com/Webflow-Examples/populate-data-into-webflow-cms) example repo.
-
-<img src="https://wadoodh.github.io/images/hitsperpage-cssclasses-example.png" alt="hitsperpage-cssclasses-example">
 
 # The Javascript
 
