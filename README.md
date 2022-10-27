@@ -2,9 +2,9 @@
 
 Algolia Instantsearch allows us to build a UI that gives our users several options to filter our data.
 
-- Demo site: https://Algolia-instantsearch.webflow.io/
-- Algolia documentation: https://www.Algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/
-- Algolia instantsearch showcase: https://www.Algolia.com/doc/guides/building-search-ui/widgets/showcase/js/
+- Demo site: https://algolia-instantsearch.webflow.io/
+- Algolia documentation: https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/
+- Algolia instantsearch showcase: https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/js/
 
 # How it works
 
@@ -12,19 +12,19 @@ We need to build the UI in Webflow and give the relevant HTML elements an id. In
 
 # Customizing Algolia Widgets
 
-Every Algolia widget accepts optional parameters to add extra functionality. For example, the [hitsPerPage widget](https://www.algolia.com/doc/api-reference/widgets/hits-per-page/js/?client=With+a+CDN) explains the extra parameters it accepts.
+Every Algolia widget accepts optional parameters to add extra functionality. For example, the [hitsPerPage widget](https://www.algolia.com/doc/api-reference/widgets/hits-per-page/js/?client=With+a+CDN) below shows the extra parameters it accepts.
 
 <img src="https://wadoodh.github.io/images/hitsperpage-widget-example.png" width="600" alt="hitsperpage-widget-example">
 
 # Style Algolia Widget
 
-Every Algolia widget has a cssClasses property which allows you to write your own css and attach it to the widget. Here's an example of the hitsPerPage widget.
+Every Algolia widget has a `cssClasses` property which allows you to write your own css and attach it to the widget.
 
 <img src="https://wadoodh.github.io/images/hitsperpage-cssclasses-example.png" width="600" alt="hitsperpage-cssclasses-example">
 
 # Automating the process
 
-We can automate data into Webflow by building backwards from Algolia. This workflow will automatically add data to Webflow and trigger the webhook to add data to our search index.
+We can automate data into Webflow by building backwards from Algolia. This workflow will automatically add data to Webflow and trigger the webhook to add data to our search index. The diagram below shows the flow of data once all pieces are in place.
 
 <img src="https://wadoodh.github.io/images/node-webhook-algolia-diagram.png" alt="node-webhook-Algolia-diagram">
 
@@ -34,7 +34,7 @@ We can automate data into Webflow by building backwards from Algolia. This workf
 
 2. Create and add the `collection_item_created` webhook to Webflow with your endpoint. The endpoint should include code to make an api call to Algolia to add each item. See the [webhook examples repo](https://github.com/Webflow-Examples/webhook-examples).
 
-**Note:** _We can also upload a JSON or CSV file to add data into Algolia. However, CSV files do not have an easy way to work with the required javascript array format for faceting in Algolia. This will impact how facets are created in Algolia._
+**Note:** _We can also upload a JSON or CSV file to add data into Algolia. However, CSV files do not have an easy way to work with the required javascript array format for faceting in Algolia. This will impact how facets are created in Algolia. Use the API to add data to get around this._
 
 3. Add Algolia scripts and build the UI in Webflow.
 
