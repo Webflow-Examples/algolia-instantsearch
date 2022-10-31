@@ -153,6 +153,7 @@
 }
 
 .wf-search-input {
+  border-radius: 0px;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.4);
   color: white;
@@ -172,6 +173,15 @@
 
 .wf-search-input:focus {
   border-color: white;
+}
+
+/* || Powered by algolia */
+
+.wf-powered-by {
+  background: white;
+  padding: 15px;
+  height: 40px;
+  justify-content: center;
 }
 
 /* || Stats component */
