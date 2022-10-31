@@ -48,8 +48,8 @@ We can automate data into Webflow by building backwards from Algolia. This workf
 
 ```js
 window.addEventListener("DOMContentLoaded", () => {
-  // establish connection to search index with application ID and public api key from Algolia
-  const searchClient = Algoliasearch(
+  // establish connection to search index with application ID and public api key from algolia
+  const searchClient = algoliasearch(
     "6RJT8M6BD5",
     "113ff52e9d3bd9f965ce3ba85217a2c2"
   );
@@ -131,6 +131,13 @@ window.addEventListener("DOMContentLoaded", () => {
         resetIcon: "wf-search-reset",
       },
     }),
+    // Powered by algolia logo component
+    instantsearch.widgets.poweredBy({
+      container: "#poweredBy",
+      cssClasses: {
+        root: "wf-powered-by",
+      },
+    }),
     // Stats component
     instantsearch.widgets.stats({
       container: "#stats",
@@ -197,7 +204,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   search.start();
 
-  // hide loader in Webflow after initiating Algolia
+  // hide loader in Webflow after initiating algolia
   const loader = document.getElementById("loader");
   loader.style.opacity = "0";
   setTimeout(() => {

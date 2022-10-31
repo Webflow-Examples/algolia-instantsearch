@@ -82,10 +82,9 @@ window.addEventListener("DOMContentLoaded", () => {
         resetIcon: "wf-search-reset",
       },
     }),
-    // powered by algolia logo
+    // Powered by algolia logo component
     instantsearch.widgets.poweredBy({
       container: "#poweredBy",
-      /* theme: "light", */
       cssClasses: {
         root: "wf-powered-by",
       },
